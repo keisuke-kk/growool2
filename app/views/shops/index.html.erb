@@ -1,0 +1,36 @@
+<div class="shops-index">
+  <div class="photo2">
+    <div class="photo2__image">
+      <%= image_tag "cafe2.webp", class: "photo2__image__el" %>
+      <p class="photo2__image__ms">“If you’re not failing every now and again, it’s a sign you’re not doing anything very innovative.”</p>
+      <p class="photo2__image__msn">Woody Allen</p>
+    </div>
+  </div>
+  <% @shops.each do |shop| %>
+    <div class="content">
+      <div class="content__name">
+        <p class="content__name__title">
+          <%= shop.name %>
+        </p>
+      </div>
+      <div class="content__c">
+        <%= image_tag shop.aicon_image, class: "content__c__image" %>
+        <div class="content__c__detail">
+          <%= simple_format(shop.detail) %>
+        </div>
+      </div>
+      <% if admin_signed_in? %>
+        <div class="content__more">
+          <ul class="content__more__ul">
+            <li class="content__more__ul__li">
+              <%= link_to 'edit', "/shops/#{shop.id}/edit", method: :get, class: "content__more__ul__li__el" %>
+            </li>
+            <li class="content__more__ul__li">
+              <%= link_to 'delete', "/shops/#{shop.id}", method: :delete, class: "content__more__ul__li__el" %>
+            </li>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Growool</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="header__logo">
+        <a href="/" class="header__logo--a">Growool</a>
+      </h1>
+      <nav class="header__wrap">
+        <ul class="header__wrap__nav">
+          <li class="header__wrap__nav__li">
+            <%= link_to "shops", shops_path, class: "header__wrap__nav__li--a" %>
+          </li>
+          <li class="header__wrap__nav__li">
+            <%= link_to "study_tips", study_tips_path, class: "header__wrap__nav__li--a" %>
+          </li>
+          <li class="header__wrap__nav__li">
+            <%= link_to "messages", messages_path, class: "header__wrap__nav__li--a" %>
+          </li>
+          <li class="header__wrap__nav__li">
+            <% if admin_signed_in? %>
+              <%= link_to "sign-out", destroy_admin_session_path, method: :delete, class: "header__wrap__nav__li--a" %>
+            <% else %>
+              <%= link_to "admin", new_admin_session_path, class: "header__wrap__nav__li--a" %>
+            <% end %>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <%= yield %>
+  </body>
+</html>

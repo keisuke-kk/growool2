@@ -1,0 +1,97 @@
+html {
+  background: #f5f5f5;
+}
+
+body {
+
+  .main {
+  
+    .photo {
+  
+      &__image {
+        position: relative;
+  
+        &__el {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+        }
+  
+        &__ms {
+          position: absolute;
+          color: white;
+          top: 0;
+          left: 0;
+          font-size: 2em;
+          font-family: Quicksand, sans-serif;
+        }
+  
+        &__msn {
+          position: absolute;
+          color: white;
+          top: 40px;
+          left: 0;
+          font-size: 2em;
+          font-family: Quicksand, sans-serif;
+        }
+      }
+    }
+  
+    .introduction {
+      text-align: center;
+      margin: 100px 0;
+  
+      &__p {
+        font-family: serif;
+      }
+    }
+  
+    .photo2 {
+      position: relative;
+  
+      &__image {
+  
+        &__el {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+        }
+  
+        &__ms {
+          position: absolute;
+          color: white;
+          top: 0;
+          left: 0;
+          font-size: 2em;
+          font-family: Quicksand, sans-serif;
+          padding: 20px;
+          width:  200px;
+          height: 45px;
+          text-align:  center;
+          top:  0;
+          bottom:  0;
+          left:  0;
+          right:  0;
+          margin:  auto;
+          text-decoration: none;
+        }
+  
+        &__msn {
+          position: absolute;
+          color: white;
+          font-family: Quicksand, sans-serif;
+          padding: 20px;
+          width: 450px;
+          height: 45px;
+          text-align: center;
+          top: 100px;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          font-size: large;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.photo4 {
+
+  &__image {
+    position: relative;
+
+    &__el {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    &__ms {
+      position: absolute;
+      color: white;
+      top: 0;
+      left: 0;
+      font-size: 2em;
+      font-family: Quicksand, sans-serif;
+    }
+
+    &__msn {
+      position: absolute;
+      color: white;
+      top: 50px;
+      right: 0;
+      font-size: 2em;
+      font-family: Quicksand, sans-serif;
+    }
+  }
+}
+
+.content4 {
+  margin: 100px;
+
+  &__user {
+    text-align: right;
+
+    &__el {
+      margin-left: 10px;
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  &__c {
+    height: 800px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    overflow: scroll;
+
+    &__el {
+      margin: 50px;
+
+      &__time {
+        color: darkgrey;
+        font-size: smaller;
+        text-align: right;
+      }
+      &__delete {
+        text-align: right;
+        
+        &__d {
+          text-decoration: none;
+          color: darkgrey;
+        }
+      }
+    }
+  }
+
+  &__submit {
+    margin-top: 50px;
+    text-align: center;
+    
+  }
+}
