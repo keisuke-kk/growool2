@@ -1,68 +1,83 @@
-.photo3 {
+.studytip {
 
-  &__image {
-    position: relative;
-
-    &__el {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-    }
-
-    &__ms {
-      position: absolute;
-      color: white;
-      top: 0;
-      left: 0;
-      font-size: 2em;
-      font-family: Quicksand, sans-serif;
-    }
-
-    &__msn {
-      position: absolute;
-      color: white;
-      top: 50px;
-      right: 0;
-      font-size: 2em;
-      font-family: Quicksand, sans-serif;
-    }
-  }
-}
-
-.content2 {
-  margin: 100px 150px;
-
-  &__title {
-    font-size: 2em;
-    margin-top: 100px;
-  }
-
-  &__c {
-    margin-top: 50px;
-    margin-left: 50px;
+  .photo3 {
   
     &__image {
-      height: 200px;
-      width: 300px;
-      object-fit: cover;
+      position: relative;
+  
+      &__el {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+      }
+  
+      &__ms {
+        position: absolute;
+        color: white;
+        top: 0;
+        left: 0;
+        font-size: 2em;
+        font-family: Quicksand, sans-serif;
+      }
+  
+      &__msn {
+        position: absolute;
+        color: white;
+        top: 50px;
+        right: 0;
+        font-size: 2em;
+        font-family: Quicksand, sans-serif;
+      }
     }
   }
-
-  &__more {
-    margin-top: 20px;
-    margin-left: 50px;
-
-    &__ul {
-      display: flex;
-
-      &__li {
-
-        &__el {
-          text-decoration: none;
-          color: black;
-          margin-right: 40px;
+  
+  .content2 {
+    margin: 100px 150px;
+  
+    &__title {
+      font-size: 2em;
+      margin-top: 100px;
+    }
+  
+    &__c {
+      margin-top: 50px;
+      margin-left: 50px;
+    
+      &__image {
+        height: 200px;
+        width: 300px;
+        object-fit: cover;
+      }
+    }
+  
+    &__more {
+      margin-top: 20px;
+      margin-left: 50px;
+  
+      &__ul {
+        display: flex;
+  
+        &__li {
+  
+          &__el {
+            text-decoration: none;
+            color: black;
+            margin-right: 40px;
+          }
         }
       }
+    }
+  }
+  
+  .study-tip-new {
+    width: 100%;
+    text-align: right;
+    height: 110px;
+
+    &__el {
+      margin-right: 150px;
+      text-decoration: none;
+      color: black;
     }
   }
 }

@@ -1,0 +1,14 @@
+<div class="shop-show">
+  <div class="content">
+    <div class="content__image">
+      <%= image_tag @shop.aicon_image, class: "content__image__el" %>
+    </div>
+    <div class="content__detail"><%= @shop.detail %></div>
+    <div class="content__l">
+      <div class="content__l__name"><%= @shop.name %></div>
+      <div class="content__l__tel"><span class="content__l__tel--op">tel</span><%= @shop.tel %></div>
+      <div class="content__l__address"><span class="content__l__address--op">address</span><%= @shop.address %></div>
+      <div class="content__l__url"><span class="content__l__url--op">url</span><%= @shop.url %></div>
+    </div>
+  </div>
+</div>

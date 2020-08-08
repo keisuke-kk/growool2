@@ -19,24 +19,24 @@
     <p class="introduction__p">アプリケーションです。</p>
   </div>
   <div class="photo2">
-    <div class="photo2__image">
+    <%= link_to shops_path, class: "photo2__image" do %>
       <%= image_tag "cafe2.webp", class: "photo2__image__el" %>
-      <%= link_to "Shops", shops_path, class: "photo2__image__ms" %>
+      <div class="photo2__image__ms">Shops</div>
       <p class="photo2__image__msn">勉強に最適なカフェ等を紹介します</p>
-    </div>
+    <% end %>
   </div>
   <div class="photo2">
-    <div class="photo2__image">
+    <%= link_to study_tips_path, class: "photo2__image" do %>
       <%= image_tag "cafe3.webp", class: "photo2__image__el" %>
-      <%= link_to "StudyTips", study_tips_path, class: "photo2__image__ms" %>
+      <div class="photo2__image__ms">StudyTips</div>
       <p class="photo2__image__msn">効率的な学習方法や取り組み方を紹介します</p>
-    </div>
+    <% end %>
   </div>
   <div class="photo2">
-    <div class="photo2__image">
+    <%= link_to messages_path, class: "photo2__image" do %>
       <%= image_tag "cafe4.webp", class: "photo2__image__el" %>
-      <%= link_to "Messages", messages_path, class: "photo2__image__ms" %>
+      <div class="photo2__image__ms">Messages</div>
       <p class="photo2__image__msn">もっと良い勉強法などをご紹介いただけると幸いです</p>
-    </div>
+    <% end %>
   </div>
 </div>
