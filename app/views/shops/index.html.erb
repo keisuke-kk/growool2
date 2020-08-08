@@ -8,17 +8,19 @@
   </div>
   <% @shops.each do |shop| %>
     <div class="content">
-      <div class="content__name">
-        <p class="content__name__title">
-          <%= shop.name %>
-        </p>
-      </div>
-      <div class="content__c">
-        <%= image_tag shop.aicon_image, class: "content__c__image" %>
-        <div class="content__c__detail">
-          <%= simple_format(shop.detail) %>
+      <%= link_to shop_path(shop), class: "content__l" do %>
+        <div class="content__l__name">
+          <p class="content__l__name__title">
+            <%= shop.name %>
+          </p>
         </div>
-      </div>
+        <div class="content__l__c">
+          <%= image_tag shop.aicon_image, class: "content__l__c__image" %>
+          <div class="content__l__c__detail">
+            <%= simple_format(shop.detail) %>
+          </div>
+        </div>
+      <% end %>
       <% if admin_signed_in? %>
         <div class="content__more">
           <ul class="content__more__ul">
@@ -33,4 +35,9 @@
       <% end %>
     </div>
   <% end %>
+  <div class="shop-new">
+    <% if admin_signed_in? %>
+      <%= link_to 'new', new_shop_path, class: "shop-new__el" %>
+    <% end %>
+  </div>
 </div>

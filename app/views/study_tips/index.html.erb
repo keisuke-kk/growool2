@@ -1,4 +1,4 @@
-<div>
+<div class="studytip">
   <div class="photo3">
     <div class="photo3__image">
       <%= image_tag "cafe3.webp", class: "photo3__image__el" %>
@@ -31,6 +31,11 @@
           </ul>
         </div>
       <% end %>
+    <% end %>
+  </div>
+  <div class="study-tip-new">
+    <% if admin_signed_in? %>
+      <%= link_to 'new', new_study_tip_path, class: "study-tip-new__el" %>
     <% end %>
   </div>
 </div>
