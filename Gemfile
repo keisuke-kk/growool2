@@ -69,3 +69,5 @@ gem 'pry-rails'
 gem 'compass-rails', github: 'Compass/compass-rails'
 gem 'sprockets'
 gem 'devise'
+gem 'mini_magick'
+gem 'aws-sdk-s3', require: false
