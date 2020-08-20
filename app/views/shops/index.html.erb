@@ -35,6 +35,7 @@
       <% end %>
     </div>
   <% end %>
+  <%= javascript_pack_tag 'hello_vue' %>
   <div class="shop-new">
     <% if admin_signed_in? %>
       <%= link_to 'new', new_shop_path, class: "shop-new__el" %>

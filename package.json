@@ -1,5 +1,14 @@
 {
   "name": "growool",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "5.1.1",
+    "rails-ujs": "^5.2.4-3",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.11.0"
+  }
 }
