@@ -1,41 +1,51 @@
 <div class="studytip">
-  <div class="photo3">
-    <div class="photo3__image">
-      <%= image_tag "cafe3.webp", class: "photo3__image__el" %>
-      <p class="photo3__image__ms">“The greatest glory in living lies not in never falling, but in rising every time we fall.”</p>
-      <p class="photo3__image__msn">Nelson Mandela</p>
-    </div>
-  </div>
-  <div class="content2">
-    <% @study_tips.each do |study_tip| %>
-      <h2 class="content2__title">
-        <%= study_tip.title %>
-      </h2>
-      <div class="content2__c">
-        <div>
-          <%= image_tag study_tip.image, class: "content2__c__image" %>
-        </div>
-        <div class="content2__c__detail">
-          <%= simple_format(study_tip.detail) %>
+  <div id="app">
+    <fade-in1>
+      <div class="photo3">
+        <div class="photo3__image">
+          <%= image_tag "cafe3.webp", class: "photo3__image__el" %>
+          <p class="photo3__image__ms">“The greatest glory in living lies not in never falling, but in rising every time we fall.”</p>
+          <p class="photo3__image__msn">Nelson Mandela</p>
         </div>
       </div>
-      <% if admin_signed_in? %>
-        <div class="content2__more">
-          <ul class="content2__more__ul">
-            <li class="content2__more__ul__li">
-              <%= link_to 'edit', "/study_tips/#{study_tip.id}/edit", method: :get, class: "content2__more__ul__li__el" %>
-            </li>
-            <li class="content2__more__ul__li">
-              <%= link_to 'delete', "/study_tips/#{study_tip.id}", method: :delete, class: "content2__more__ul__li__el" %>
-            </li>
-          </ul>
+    </fade-in1>
+    <div class="content2">
+      <% @study_tips.each do |study_tip| %>
+        <fade-in1>
+          <h2 class="content2__title">
+            <%= study_tip.title %>
+          </h2>
+        </fade-in1>
+        <div class="content2__c">
+          <fade-in1>
+            <div>
+              <%= image_tag study_tip.image, class: "content2__c__image" %>
+            </div>
+          </fade-in1>
+          <fade-in1>
+            <div class="content2__c__detail">
+              <%= simple_format(study_tip.detail) %>
+            </div>
+          </fade-in1>
         </div>
+        <% if admin_signed_in? %>
+          <div class="content2__more">
+            <ul class="content2__more__ul">
+              <li class="content2__more__ul__li">
+                <%= link_to 'edit', "/study_tips/#{study_tip.id}/edit", method: :get, class: "content2__more__ul__li__el" %>
+              </li>
+              <li class="content2__more__ul__li">
+                <%= link_to 'delete', "/study_tips/#{study_tip.id}", method: :delete, class: "content2__more__ul__li__el" %>
+              </li>
+            </ul>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
-  <div class="study-tip-new">
-    <% if admin_signed_in? %>
-      <%= link_to 'new', new_study_tip_path, class: "study-tip-new__el" %>
-    <% end %>
+    </div>
+    <div class="study-tip-new">
+      <% if admin_signed_in? %>
+        <%= link_to 'new', new_study_tip_path, class: "study-tip-new__el" %>
+      <% end %>
+    </div>
   </div>
 </div>

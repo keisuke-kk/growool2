@@ -1,45 +1,54 @@
 <div class="main">
-  <div class="photo">
-    <div class="photo__image">
-      <%= image_tag "cafe1.webp", class: "photo__image__el" %>
-      <p class="photo__image__ms">“Once you stop learning, you start dying.”</p>
-      <p class="photo__image__msn">Albert Einstein</p>
-    </div>
-  </div>
   <div id="app">
-    {{ message }}
-  </div>
-  <div class="introduction">
-    <p class="introduction__p">ある偉人の言葉に</p>
-    <p class="introduction__p">「人の上に人を作らず、人の下に人を作らず」</p>
-    <p class="introduction__p">というものがあります。</p>
-    <p class="introduction__p">しかし、これには続きがあります。</p>
-    <p class="introduction__p">それは</p>
-    <p class="introduction__p">「学問に励んだかどうかで違いが生じる」</p>
-    <br>
-    <p class="introduction__p">人の価値を高める"growth"に</p>
-    <p class="introduction__p">効果的な情報を"pool"することを目的とした</p>
-    <p class="introduction__p">アプリケーションです。</p>
-  </div>
-  <div class="photo2">
-    <%= link_to shops_path, class: "photo2__image" do %>
-      <%= image_tag "cafe2.webp", class: "photo2__image__el" %>
-      <div class="photo2__image__ms">Shops</div>
-      <p class="photo2__image__msn">勉強に最適なカフェ等を紹介します</p>
-    <% end %>
-  </div>
-  <div class="photo2">
-    <%= link_to study_tips_path, class: "photo2__image" do %>
-      <%= image_tag "cafe3.webp", class: "photo2__image__el" %>
-      <div class="photo2__image__ms">StudyTips</div>
-      <p class="photo2__image__msn">効率的な学習方法や取り組み方を紹介します</p>
-    <% end %>
-  </div>
-  <div class="photo2">
-    <%= link_to messages_path, class: "photo2__image" do %>
-      <%= image_tag "cafe4.webp", class: "photo2__image__el" %>
-      <div class="photo2__image__ms">Messages</div>
-      <p class="photo2__image__msn">もっと良い勉強法などをご紹介いただけると幸いです</p>
-    <% end %>
+    <fade-in1>
+      <div class="photo">
+        <div class="photo__image">
+          <%= image_tag "cafe1.webp", class: "photo__image__el" %>
+          <p class="photo__image__ms">“Once you stop learning, you start dying.”</p>
+          <p class="photo__image__msn">Albert Einstein</p>
+        </div>
+      </div>
+    </fade-in1>
+    <fade-in1>
+      <div class="introduction">
+        <p class="introduction__p">ある偉人の言葉に</p>
+        <p class="introduction__p">「人の上に人を作らず、人の下に人を作らず」</p>
+        <p class="introduction__p">というものがあります。</p>
+        <p class="introduction__p">しかし、これには続きがあります。</p>
+        <p class="introduction__p">それは</p>
+        <p class="introduction__p">「学問に励んだかどうかで違いが生じる」</p>
+        <br>
+        <p class="introduction__p">人の価値を高める"growth"に</p>
+        <p class="introduction__p">効果的な情報を"pool"することを目的とした</p>
+        <p class="introduction__p">アプリケーションです。</p>
+      </div>
+    </fade-in1>
+    <fade-in2>
+      <div class="photo2">
+        <%= link_to shops_path, class: "photo2__image" do %>
+          <%= image_tag "cafe2.webp", class: "photo2__image__el" %>
+          <div class="photo2__image__ms">Shops</div>
+          <p class="photo2__image__msn">勉強に最適なカフェ等を紹介します</p>
+        <% end %>
+      </div>
+    </fade-in2>
+    <fade-in2>
+      <div class="photo2">
+        <%= link_to study_tips_path, class: "photo2__image" do %>
+          <%= image_tag "cafe3.webp", class: "photo2__image__el" %>
+          <div class="photo2__image__ms">StudyTips</div>
+          <p class="photo2__image__msn">効率的な学習方法や取り組み方を紹介します</p>
+        <% end %>
+      </div>
+    </fade-in2>
+    <fade-in2>
+      <div class="photo2">
+        <%= link_to messages_path, class: "photo2__image" do %>
+          <%= image_tag "cafe4.webp", class: "photo2__image__el" %>
+          <div class="photo2__image__ms">Messages</div>
+          <p class="photo2__image__msn">もっと良い勉強法などをご紹介いただけると幸いです</p>
+        <% end %>
+      </div>
+    </fade-in2>
   </div>
 </div>
