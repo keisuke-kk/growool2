@@ -3,13 +3,13 @@
     <p class="register2__form__title">New Study_tip</p>
     <%= form_with(model: @study_tip, local: true) do |f| %>
       <div class="register2__form__name">
-        <%= f.text_field :title, placeholder: "Tittle", size: "50", class: "register2__form__name__label" %>
+        <%= f.text_field :title, placeholder: "Tittle", size: "50", class: "register2__form__name__label", id: "study_tip-title" %>
       </div>
       <div class="register2__form__detail">
-        <%= f.text_area :detail, placeholder: "Detail", cols: "50", rows: "10", class: "register2__form__name__label" %>
+        <%= f.text_area :detail, placeholder: "Detail", cols: "50", rows: "10", class: "register2__form__name__label", id: "study_tip-detail" %>
       </div>
       <div class="register2__form__image">
-        <%= f.file_field :image, placeholder: "Image", size: "50", class: "register2__form__image__label" %>
+        <%= f.file_field :image, placeholder: "Image", size: "50", class: "register2__form__image__label", id: "study_tip-image" %>
       </div>
       <div class="register2__form__submit">
         <%= f.submit "SEND", class: "register2__form__submit__label" %>

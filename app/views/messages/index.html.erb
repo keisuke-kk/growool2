@@ -42,7 +42,7 @@
         <div class="content4__submit">
           <% if user_signed_in? || admin_signed_in?  %>
             <%= form_with(model: @message, local: true) do |f| %>
-              <%= f.text_field :text, placeholder: "Message", size: "60", class: "content4__submit__form"%>
+              <%= f.text_field :text, placeholder: "Message", size: "60", class: "content4__submit__form", id: "message-text" %>
               <%= f.submit "SEND", class: "content4__submit__btn" %>
             <% end %>
           <% end %>

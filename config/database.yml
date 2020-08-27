@@ -28,6 +28,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  username: root
+  password: 51ng@Myway_to_angel
   database: growool_test
 
 # As with config/secrets.yml, you never want to store sensitive information,

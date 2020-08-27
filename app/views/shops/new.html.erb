@@ -3,22 +3,22 @@
     <p class="register__form__title">New Shop</p>
     <%= form_with(model: @shop, local: true) do |f| %>
       <div class="register__form__name">
-        <%= f.text_field :name, placeholder: "Name", size: "50", class: "register__form__name__label" %>
+        <%= f.text_field :name, placeholder: "Name", size: "50", class: "register__form__name__label", id: "shop-name" %>
       </div>
       <div class="register__form__image">
-        <%= f.file_field :aicon_image, placeholder: "Image", size: "50", class: "register__form__image__label" %>
+        <%= f.file_field :aicon_image, placeholder: "Image", size: "50", class: "register__form__image__label", id: "shop-image" %>
       </div>
       <div class="register__form__detail">
-        <%= f.text_area :detail, placeholder: "Detail", cols: "50", rows: "10", class: "register__form__detail__label" %>
+        <%= f.text_area :detail, placeholder: "Detail", cols: "50", rows: "10", class: "register__form__detail__label", id: "shop-detail" %>
       </div>
       <div class="register__form__tel">
-        <%= f.text_field :tel, placeholder: "Tel Number", size: "50", class: "register__form__tel__label" %>
+        <%= f.text_field :tel, placeholder: "Tel Number", size: "50", class: "register__form__tel__label", id: "shop-tel" %>
       </div>
       <div class="register__form__address">
-        <%= f.text_field :address, placeholder: "Address", size: "50", class: "register__form__address__label" %>
+        <%= f.text_field :address, placeholder: "Address", size: "50", class: "register__form__address__label", id: "shop-address" %>
       </div>
       <div class="register__form__url">
-        <%= f.text_field :url, placeholder: "URL", size: "50", class: "register__form__url__label" %>
+        <%= f.text_field :url, placeholder: "URL", size: "50", class: "register__form__url__label", id: "shop-url" %>
       </div>
       <div class="register__form__submit">
         <%= f.submit "SEND", class: "register__form__submit__label" %>
