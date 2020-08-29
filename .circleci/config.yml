@@ -8,8 +8,7 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.5.1-node-browsers
-          node:
-            version: v12.14.1
+      - image: circleci/node:12.14.1
     steps:
       - checkout
       - ruby/install-deps
