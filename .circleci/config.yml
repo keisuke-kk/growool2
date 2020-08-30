@@ -12,7 +12,7 @@ jobs:
     steps:
       - checkout
       - ruby/install-deps
-      - run: install -y yarn
+      - run: install yarn
       # Store bundle cache
       - node/install-packages:
           pkg-manager: yarn
