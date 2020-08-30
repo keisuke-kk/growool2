@@ -12,6 +12,22 @@ jobs:
     steps:
       - checkout
       - ruby/install-deps
+      - run:
+          name: update npm
+          command: |
+            mkdir -p ~/tmp
+            cd ~/tmp
+            npm install npm@4
+            rm -rf /usr/local/lib/node_modules
+            mv node_modules /usr/local/lib/
+            cd
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
       # Store bundle cache
       - node/install-packages:
           pkg-manager: yarn
