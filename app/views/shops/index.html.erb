@@ -10,35 +10,33 @@
       </div>
     </fade-in1>
     <% @shops.each do |shop| %>
-      <fade-in1>
-        <div class="content">
-          <%= link_to shop_path(shop), class: "content__l" do %>
-            <div class="content__l__name">
-              <p class="content__l__name__title">
-                <%= shop.name %>
-              </p>
+      <div class="content">
+        <%= link_to shop_path(shop), class: "content__l" do %>
+          <div class="content__l__name">
+            <p class="content__l__name__title">
+              <%= shop.name %>
+            </p>
+          </div>
+          <div class="content__l__c">
+            <%= image_tag shop.aicon_image, class: "content__l__c__image" %>
+            <div class="content__l__c__detail">
+              <%= simple_format(shop.detail) %>
             </div>
-            <div class="content__l__c">
-              <%= image_tag shop.aicon_image, class: "content__l__c__image" %>
-              <div class="content__l__c__detail">
-                <%= simple_format(shop.detail) %>
-              </div>
-            </div>
-          <% end %>
-          <% if admin_signed_in? %>
-            <div class="content__more">
-              <ul class="content__more__ul">
-                <li class="content__more__ul__li">
-                  <%= link_to 'edit', "/shops/#{shop.id}/edit", method: :get, class: "content__more__ul__li__el" %>
-                </li>
-                <li class="content__more__ul__li">
-                  <%= link_to 'delete', "/shops/#{shop.id}", method: :delete, class: "content__more__ul__li__el" %>
-                </li>
-              </ul>
-            </div>
-          <% end %>
-        </div>
-      </fade-in1>
+          </div>
+        <% end %>
+        <% if admin_signed_in? %>
+          <div class="content__more">
+            <ul class="content__more__ul">
+              <li class="content__more__ul__li">
+                <%= link_to 'edit', "/shops/#{shop.id}/edit", method: :get, class: "content__more__ul__li__el" %>
+              </li>
+              <li class="content__more__ul__li">
+                <%= link_to 'delete', "/shops/#{shop.id}", method: :delete, class: "content__more__ul__li__el" %>
+              </li>
+            </ul>
+          </div>
+        <% end %>
+      </div>
     <% end %>
     <div class="shop-new">
       <% if admin_signed_in? %>
