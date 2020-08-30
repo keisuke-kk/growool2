@@ -29,6 +29,7 @@ ___比較的新しい技術に挑戦したこと___<br>
 &emsp;&emsp;&emsp;Docker<br>
 &emsp;&emsp;&emsp;CircleCI<br>
 &emsp;&emsp;&emsp;Vue.js<br>
+&emsp;<br>
 ___管理者とユーザーで権限を分けたこと___<br>
 - 管理者<br>
     - shopsにおけるCRUD<br>
@@ -36,7 +37,6 @@ ___管理者とユーザーで権限を分けたこと___<br>
     - messagesにおける投稿および削除<br>
 - ユーザー<br>
     - messagesにおける投稿のみ<br>
-
 
 # 実装機能
 - admins
