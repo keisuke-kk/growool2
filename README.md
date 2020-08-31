@@ -44,26 +44,20 @@ ___管理者とユーザーで権限を分けたこと___<br>
 - admins
    - ログイン機能
    - ログアウト機能
-   - フラッシュメッセージ機能
    - shops,study-tips,messagesへの権限
 - users
    - ログイン機能
    - ログアウト機能
-   - フラッシュメッセージ機能
-   - messagesへの権限
+   - messagesへの権限(新規作成機能のみ）
 - shops
    - 新規作成機能
    - 編集機能
    - 削除機能
-   - 検索機能
-   - ページネーション機能
-   - 画像複数投稿機能
+   - 詳細表示機能
 - study_tips
    - 新規作成機能
    - 編集機能
    - 削除機能
-   - 検索機能
-   - ページネーション機能
 - messages
    - 新規作成機能
    - 削除機能
@@ -75,10 +69,10 @@ ___管理者とユーザーで権限を分けたこと___<br>
 - github
 - ruby
 - ruby on rails
-- html haml
+- html
 - scss
 - Vue.js
-
+- rspec
 
 
 # 課題や今後実装したい機能
@@ -94,10 +88,6 @@ ___管理者とユーザーで権限を分けたこと___<br>
 |------|----|-------|
 |name|string|null: false, unique: true, default: ""|
 |password|string|null: false, default: ""|
-### Association
-- has_many :shops
-- has_many :study_tips
-- has_many :messages
 
 ## usersテーブル
 |Column|Type|Options|
@@ -105,9 +95,6 @@ ___管理者とユーザーで権限を分けたこと___<br>
 |name|string|null: false, unique: true, default: ""|
 |email|string|null: false, unique: true, default: ""|
 |password|string|null: false, default: ""|
-### Association
-- has_many :messages
-
 
 ## shopsテーブル
 |Column|Type|Options|
@@ -118,18 +105,6 @@ ___管理者とユーザーで権限を分けたこと___<br>
 |tel|string||
 |address|string||
 |url|string||
-|user_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :admin
-- has_many :shop_images
-
-## shop_imagesテーブル
-|Column|Type|Options|
-|------|----|-------|
-|image|text|null: false, limit: 4294967295|
-|shop_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :shop
 
 ## study_tipsテーブル
 |Column|Type|Options|
@@ -137,16 +112,8 @@ ___管理者とユーザーで権限を分けたこと___<br>
 |title|string|null: false|
 |detail|text|null: false|
 |image|text|limit: 4294967295|
-|user_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :admin
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
-|image|text|limit: 4294967295|
-|user_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :admin
-- belongs_to :user
