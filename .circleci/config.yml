@@ -11,12 +11,12 @@ jobs:
     steps:
       - checkout
       - ruby/install-deps
+      - run:
+          command: bundle exec rails webpacker:install && bundle exec rails webpacker:install:vue
       # Store bundle cache
       - node/install-packages:
           pkg-manager: yarn
           cache-key: "yarn.lock"
-      - run:
-          command: bin/rails webpacker:install && bin/rails webpacker:install:vue
 
   test:
     parallelism: 3
