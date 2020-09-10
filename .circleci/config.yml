@@ -11,8 +11,8 @@ jobs:
     steps:
       - checkout
       - ruby/install-deps
-      - run:
-          command: bin/rails webpacker:install && bin/rails webpacker:install:vue
+      # - run:
+      #     command: bin/rails webpacker:install && bin/rails webpacker:install:vue
       # Store bundle cache
       - node/install-packages:
           pkg-manager: yarn
