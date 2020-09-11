@@ -12,8 +12,10 @@ jobs:
       - checkout
       - ruby/install-deps
       # Store bundle cache
+      - run:
+          shell: /bin/sh
+          command: bundle exec rails webpacker:install && bundle exec rails webpacker:install:vue
       - node/install-packages:
-          version: '10.13.0'
           pkg-manager: yarn
           cache-key: "yarn.lock"
 
