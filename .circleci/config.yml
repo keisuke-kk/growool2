@@ -12,9 +12,8 @@ jobs:
       - checkout
       - ruby/install-deps
       # Store bundle cache
-      - node/install:
-          version: '10.13.0'
       - node/install-packages:
+          version: '10.13.0'
           pkg-manager: yarn
           cache-key: "yarn.lock"
 
