@@ -7,14 +7,11 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.5.1-node
+      - image: circleci/ruby:2.5.1-node:10.17.0
     steps:
       - checkout
       - ruby/install-deps
       # Store bundle cache
-      - run:
-          shell: /bin/sh
-          command: curl https://nodejs.org/en/download/
       - run:
           shell: /bin/sh
           command: bundle exec rails webpacker:install && bundle exec rails webpacker:install:vue
