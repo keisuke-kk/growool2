@@ -7,7 +7,8 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.5.1-node:10.17.0
+      - image: circleci/ruby:2.5.1
+      - image: circleci/node:10.17.0
     steps:
       - checkout
       - ruby/install-deps
