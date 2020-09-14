@@ -24,13 +24,13 @@ jobs:
   test:
     parallelism: 3
     docker:
-      - image: circleci/ruby:2.5.1-node
+      - image: circleci/ruby:2.5.1-apache-node-browsers
       - image: circleci/mysql:5.6
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
           DB_USERNAME: 'root'
-          DB_PASSWORD: '51ng@Myway_to_angel'
+          DB_PASSWORD: ''
     steps:
       - checkout
       - ruby/install-deps
