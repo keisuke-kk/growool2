@@ -31,8 +31,6 @@ jobs:
           DB_HOST: 127.0.0.1
           DB_USERNAME: 'root'
           DB_PASSWORD: ''
-      - run:
-          command: mysql_secure_installation -y
     steps:
       - checkout
       - ruby/install-deps
@@ -44,6 +42,8 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
           cache-key: "yarn.lock"
+      - run:
+          command: mysql_secure_installation -y
       - run:
           name: Wait for DB
           command: dockerize -wait tcp://localhost:5432 -timeout 1m
