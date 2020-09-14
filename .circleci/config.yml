@@ -26,13 +26,13 @@ jobs:
     docker:
       - image: circleci/ruby:2.5.1-node
       - image: circleci/mysql:5.6
-        - run:
-            command: mysql_secure_installation -y
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
           DB_USERNAME: 'root'
           DB_PASSWORD: ''
+      - run:
+          command: mysql_secure_installation -y
     steps:
       - checkout
       - ruby/install-deps
