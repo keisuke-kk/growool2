@@ -17,9 +17,6 @@ jobs:
           command: |
             curl -sSL "https://nodejs.org/dist/v11.10.0/node-v11.10.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v11.10.0-linux-x64/bin/node
             curl https://www.npmjs.com/install.sh | sudo bash
-      # - run:
-      #     shell: /bin/sh
-      #     command: bundle exec rails webpacker:install && bundle exec rails webpacker:install:vue
       - node/install-packages:
           pkg-manager: yarn
           cache-key: "yarn.lock"
@@ -28,7 +25,7 @@ jobs:
     parallelism: 3
     docker:
       - image: circleci/mysql:5.6
-      - image: circleci/ruby:2.5.1-node-browsers
+      - image: circleci/ruby:2.5.1-node
         environment:
           RAILS_ENV: test
           DB_HOST: 127.0.0.1
